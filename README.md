@@ -78,6 +78,8 @@ neurohack-2026/
 ---
 
 ## Contact
+Main -->  hackathonparis.nucleate@gmail.com
 
 - Rachele Rebecca Rubiu — rachelerebr@nucleate.org
 - Gabriel Michaux — gabrielm@nucleate.org
+- Shirine Merlo - shirinem@nucleate.org 
