@@ -1,12 +1,11 @@
 <img width="1408" height="768" alt="Gemini_Generated_Image_dmax3qdmax3qdmax" src="https://github.com/user-attachments/assets/2a3d5ca7-d935-47c9-a815-f89c30379d79" />
 
-
 # NeuroHack Paris 2026
 
 > **Beyond Inflammation: Detect, Prevent, Cure**
 > A 36-hour neuro-immunology hackathon · Brain&Mind Incubator, Paris · October 2026
 
-Organised by [Nucleate Paris](https://nucleate.xyz) × Nucleate London.
+Organised by [Nucleate Paris](https://nucleate.xyz).
 
 ---
 
@@ -41,7 +40,7 @@ git push origin team/your-team-name
 |---|-------|---------|
 | 01 | [Microglia in ALS](challenges/01-microglia-als/README.md) | Servier × Paris Brain Institute |
 | 02 | [NeuroOncology & Glioblastoma](challenges/02-neuroonco-gbm/README.md) | Paris Brain Institute |
-| 03 | [Psychiatry × Neuro-Immunology](challenges/03-digital-phenotyping/README.md) | Nucleate |
+| 03 | [Wearable Biomarkers and Inflammatory Subtypes in Psychiatric Disease: Toward Preventative Psychiatry](challenges/03-digital-phenotyping/README.md) | Psychiatry × Neuro-Immunology |
 
 Full briefs → [neurohack-paris.github.io/challenges](https://hackathonparisnucleate-star.github.io/challenges.html)
 
