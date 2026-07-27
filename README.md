@@ -1,3 +1,6 @@
+<img width="1408" height="768" alt="Gemini_Generated_Image_dmax3qdmax3qdmax" src="https://github.com/user-attachments/assets/2a3d5ca7-d935-47c9-a815-f89c30379d79" />
+
+
 # NeuroHack Paris 2026
 
 > **Beyond Inflammation: Detect, Prevent, Cure**
