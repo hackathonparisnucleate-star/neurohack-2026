@@ -41,7 +41,7 @@ git push origin team/your-team-name
 |---|-------|---------|
 | 01 | [Microglia in ALS](challenges/01-microglia-als/README.md) | Servier × Paris Brain Institute |
 | 02 | [NeuroOncology & Glioblastoma](challenges/02-neuroonco-gbm/README.md) | Paris Brain Institute |
-| 03 | [Digital Phenotyping Meets Biology](challenges/03-digital-phenotyping/README.md) | Nucleate |
+| 03 | [Psychiatry × Neuro-Immunology](challenges/03-digital-phenotyping/README.md) | Nucleate |
 
 Full briefs → [neurohack-paris.github.io/challenges](https://hackathonparisnucleate-star.github.io/challenges.html)
 
