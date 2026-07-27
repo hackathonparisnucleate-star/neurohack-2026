@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NeuroHack Paris 2026</title>
+  <meta name="description" content="A 36-hour neuro-immunology hackathon at Brain&Mind Incubator, Paris. October 2026.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a class="nav-logo" href="index.html">Neuro<span>Hack</span> Paris</a>
+  <div class="nav-links">
+    <a href="index.html" class="active">Home</a>
+    <a href="challenges.html">Challenges</a>
+    <a href="index.html#tracks">Tracks</a>
+    <a href="index.html#how">How it works</a>
+    <a href="apply.html" class="nav-cta">Apply now</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <canvas class="hero-canvas" id="nc"></canvas>
+  <div class="hero-inner">
+    <div class="pill"><span class="pill-dot"></span>Applications open · October 2026</div>
+    <h1>NeuroHack<br><em>Paris 2026</em></h1>
+    <p class="hero-tagline">Beyond Inflammation: Detect, Prevent, Cure</p>
+    <div class="hero-meta">
+      <div class="hero-meta-item"><i class="ti ti-map-pin"></i>Brain&amp;Mind Incubator, Paris</div>
+      <div class="hero-meta-item"><i class="ti ti-calendar"></i>Friday evening → Sunday evening, October 2026</div>
+      <div class="hero-meta-item"><i class="ti ti-users"></i>40 selected participants</div>
+      <div class="hero-meta-item"><i class="ti ti-building-community"></i>Organised by Nucleate Paris &amp; London</div>
+    </div>
+    <div class="hero-btns">
+      <a class="btn-primary" href="apply.html"><i class="ti ti-clipboard-list"></i>Apply to participate</a>
+      <a class="btn-ghost" href="https://github.com/hackathonparisnucleate-star" target="_blank"><i class="ti ti-brand-github"></i>View on GitHub</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stat"><div class="stat-num">36h</div><div class="stat-label">Fri eve → Sun eve</div></div>
+  <div class="stat"><div class="stat-num">40</div><div class="stat-label">selected participants</div></div>
+  <div class="stat"><div class="stat-num">3</div><div class="stat-label">challenge subjects</div></div>
+  <div class="stat"><div class="stat-num">2</div><div class="stat-label">competition tracks</div></div>
+  <div class="stat"><div class="stat-num">Paris</div><div class="stat-label">Brain&amp;Mind Incubator</div></div>
+</div>
+
+<!-- ABOUT -->
+<section class="section">
+  <div class="section-header">
+    <div class="eyebrow">// the challenge</div>
+    <h2 class="section-title">Engineering the brain's immune system</h2>
+    <p class="section-sub">NeuroHack Paris brings together the best early-career researchers in Europe for an intensive weekend at the frontier of neuro-immunology. Real datasets, real compute, real jury.</p>
+  </div>
+  <div class="theme-block">
+    <div class="theme-icon"><i class="ti ti-brain"></i></div>
+    <div>
+      <div class="theme-label">Theme · Neuro-Immunology</div>
+      <p class="theme-text">From <strong>Microglia in ALS</strong> to <strong>Glioblastoma heterogeneity</strong> and <strong>digital phenotyping of inflammation-driven behaviour</strong> — three real-world challenges defined by our research partners. Build a tool, propose a bold therapy, or design a validation study. Pitch to a jury of VCs, pharma researchers, and academics on Sunday evening.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CHALLENGES (simple) -->
+<section class="section section-alt">
+  <div class="section-header">
+    <div class="eyebrow">// challenge subjects</div>
+    <h2 class="section-title">Three real problems</h2>
+    <p class="section-sub">Teams pick one challenge and work on it across the full weekend. All problems come from our research and industry partners.</p>
+  </div>
+  <div class="challenges-grid">
+
+    <div class="challenge-card">
+      <div class="ch-num">01</div>
+      <span class="ch-tag tag-servier">Servier × ICM</span>
+      <h3>Microglia in ALS</h3>
+      <p>Investigate microglial dynamics in ALS progression using public transcriptomics datasets. Proposed by Julien Verdier's lab at Paris Brain Institute in partnership with Servier.</p>
+      <a class="ch-link" href="challenges.html#ch01">See full brief <i class="ti ti-arrow-right"></i></a>
+    </div>
+
+    <div class="challenge-card">
+      <div class="ch-num">02</div>
+      <span class="ch-tag tag-icm">Paris Brain Institute</span>
+      <h3>NeuroOncology &amp; Glioblastoma</h3>
+      <p>Explore spatial and cellular heterogeneity in Glioblastoma. Map the tumour immune microenvironment using single-cell and spatial transcriptomics.</p>
+      <a class="ch-link" href="challenges.html#ch02">See full brief <i class="ti ti-arrow-right"></i></a>
+    </div>
+
+    <div class="challenge-card">
+      <div class="ch-num">03</div>
+      <span class="ch-tag tag-dp">Digital Phenotyping</span>
+      <h3>Digital Phenotyping Meets Biology</h3>
+      <p>Can passive wearable signals and an engaging self-report layer specifically detect cytokine-driven "sickness behavior" — and become an early-warning triage product?</p>
+      <a class="ch-link" href="challenges.html#ch03">See full brief <i class="ti ti-arrow-right"></i></a>
+    </div>
+
+  </div>
+</section>
+
+<!-- TRACKS -->
+<section class="section" id="tracks">
+  <div class="section-header">
+    <div class="eyebrow">// two tracks</div>
+    <h2 class="section-title">Choose your approach</h2>
+    <p class="section-sub">Every team picks one challenge and one track. Both tracks work on all three problems.</p>
+  </div>
+  <div class="tracks-grid">
+    <div class="track-card track-ai">
+      <div class="track-badge">AI / BIOINFORMATICS TRACK</div>
+      <div class="track-title">Build something that runs</div>
+      <p class="track-desc">Deliver a working computational output over the weekend. AWS GPU compute and Jupyter notebooks with a built-in coding agent are provided. Use public omics datasets or bring your own ideas.</p>
+      <div class="track-output">OUTPUT → Novel biomarker pipeline · Digital phenotyping prototype · Omics analysis · Closed-loop system</div>
+    </div>
+    <div class="track-card track-bs">
+      <div class="track-badge">BLUE SKY TRACK</div>
+      <div class="track-title">Define what nobody has asked yet</div>
+      <p class="track-desc">No code required. Propose a bold new research direction — a gene therapy approach, a new delivery mechanism, an untested hypothesis. Judged on scientific ambition, feasibility, and originality.</p>
+      <div class="track-output">OUTPUT → Research proposal · Novel hypothesis · Translational or clinical roadmap</div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section section-alt" id="how">
+  <div class="section-header">
+    <div class="eyebrow">// how to participate</div>
+    <h2 class="section-title">Fork. Build. Submit.</h2>
+    <p class="section-sub">All project work lives on GitHub. One repo per team, one PR to submit. No custom platform, no friction.</p>
+  </div>
+  <div class="steps-grid">
+    <div class="step">
+      <div class="step-circle">1</div>
+      <h4>Apply</h4>
+      <p>Fill in the application form. 40 participants are selected from across Europe — PhD students, post-docs, and researchers.</p>
+    </div>
+    <div class="step">
+      <div class="step-circle">2</div>
+      <h4>Read the docs &amp; fork</h4>
+      <p>Read the challenge briefs, explore the starter notebooks and dataset guides, then fork the repo to your team's account.</p>
+      <code>gh repo fork hackathonparisnucleate-star/neurohack-2026</code>
+    </div>
+    <div class="step">
+      <div class="step-circle">3</div>
+      <h4>Hack Fri → Sun</h4>
+      <p>36 hours on-site. AWS GPU compute available. Mentors from Servier, Paris Brain Institute, and Nucleate present throughout.</p>
+    </div>
+    <div class="step">
+      <div class="step-circle">4</div>
+      <h4>Submit a PR</h4>
+      <p>Open a pull request by Sunday afternoon. Present to the jury. Top teams win prizes and access to the Brain&amp;Mind incubator ecosystem.</p>
+      <code>git push &amp;&amp; open PR</code>
+    </div>
+  </div>
+</section>
+
+<!-- SPONSORS -->
+<section class="section">
+  <div class="section-header">
+    <div class="eyebrow">// partners &amp; sponsors</div>
+    <h2 class="section-title">Who's behind this</h2>
+  </div>
+  <div class="sponsors-row">
+    <div class="sponsor-card">
+      <div class="sponsor-name" style="color:#003087">Servier</div>
+      <div class="sponsor-role">Main Sponsor</div>
+    </div>
+    <div class="sponsor-card">
+      <div class="sponsor-name" style="color:#FF9900">AWS</div>
+      <div class="sponsor-role">Compute Partner · GPU + Jupyter</div>
+    </div>
+    <div class="sponsor-card">
+      <div class="sponsor-name" style="color:#1a1a1a">Brain&amp;Mind</div>
+      <div class="sponsor-role">Venue Partner</div>
+    </div>
+    <div class="sponsor-card">
+      <div class="sponsor-name" style="color:#1a1a1a">Paris Brain Institute</div>
+      <div class="sponsor-role">Research Partner</div>
+    </div>
+    <div class="sponsor-card">
+      <div class="sponsor-name" style="color:#7C3AED">✦ Nucleate</div>
+      <div class="sponsor-role">Organiser · Paris + London</div>
+    </div>
+    <div class="sponsor-card sponsor-open">
+      <div class="sponsor-name" style="color:#9CA3AF">Your logo</div>
+      <div class="sponsor-role">Open sponsorship slot</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band">
+  <h2>Ready to hack the brain?</h2>
+  <p>Applications open for PhD students, post-docs and researchers across Europe. Spots are limited.</p>
+  <div class="cta-btns">
+    <a class="btn-primary" href="apply.html"><i class="ti ti-clipboard-list"></i>Apply to participate</a>
+    <a class="btn-white" href="https://github.com/hackathonparisnucleate-star" target="_blank"><i class="ti ti-brand-github"></i>View on GitHub</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-left">© 2026 <span>Nucleate Paris</span> × Nucleate London</div>
+  <div class="footer-right">Brain&amp;Mind Incubator · Paris, France</div>
+</footer>
+
+<script>
+const canvas=document.getElementById('nc');
+const ctx=canvas.getContext('2d');
+const hero=canvas.parentElement;
+function resize(){canvas.width=hero.offsetWidth;canvas.height=hero.offsetHeight;}
+resize();window.addEventListener('resize',resize);
+const nodes=Array.from({length:32},()=>({x:Math.random()*canvas.width,y:Math.random()*canvas.height,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35,r:Math.random()*2+1.5}));
+function draw(){ctx.clearRect(0,0,canvas.width,canvas.height);nodes.forEach(n=>{n.x+=n.vx;n.y+=n.vy;if(n.x<0||n.x>canvas.width)n.vx*=-1;if(n.y<0||n.y>canvas.height)n.vy*=-1;});for(let i=0;i<nodes.length;i++)for(let j=i+1;j<nodes.length;j++){const dx=nodes[i].x-nodes[j].x,dy=nodes[i].y-nodes[j].y,d=Math.sqrt(dx*dx+dy*dy);if(d<155){ctx.beginPath();ctx.strokeStyle=`rgba(124,58,237,${.38*(1-d/155)})`;ctx.lineWidth=.8;ctx.moveTo(nodes[i].x,nodes[i].y);ctx.lineTo(nodes[j].x,nodes[j].y);ctx.stroke();}}nodes.forEach(n=>{ctx.beginPath();ctx.arc(n.x,n.y,n.r,0,Math.PI*2);ctx.fillStyle='rgba(167,139,250,0.85)';ctx.fill();});requestAnimationFrame(draw);}
+draw();
+</script>
+</body>
+</html>

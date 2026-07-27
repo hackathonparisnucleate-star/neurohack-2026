@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Challenges · NeuroHack Paris 2026</title>
+  <meta name="description" content="Full challenge briefs for NeuroHack Paris 2026 — ALS Microglia, Glioblastoma, Digital Phenotyping.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a class="nav-logo" href="index.html">Neuro<span>Hack</span> Paris</a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="challenges.html" class="active">Challenges</a>
+    <a href="index.html#tracks">Tracks</a>
+    <a href="index.html#how">How it works</a>
+    <a href="apply.html" class="nav-cta">Apply now</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="eyebrow">// challenge briefs</div>
+  <h1>Three real problems to solve</h1>
+  <p>All challenges are defined by our research and industry partners. Teams pick one and work on it for the full weekend, in either the AI or Blue Sky track.</p>
+</div>
+
+<section class="section">
+
+  <!-- CHALLENGE 01 -->
+  <div class="challenge-full" id="ch01">
+    <div class="challenge-full-header">
+      <div class="ch-number-big">01</div>
+      <div class="ch-title-block">
+        <span class="ch-tag tag-servier" style="margin-bottom:10px;display:inline-block">Servier × Paris Brain Institute</span>
+        <div class="ch-full-title">Microglia in ALS</div>
+        <p class="ch-full-desc">Microglia are the brain's resident immune cells — and in ALS they shift from neuroprotective to neurotoxic states as disease progresses. This challenge asks teams to characterise that transition using public transcriptomics data and propose either a novel biomarker or a therapeutic strategy targeting microglial polarisation. Proposed by Julien Verdier's lab at the Paris Brain Institute in partnership with Servier.</p>
+      </div>
+    </div>
+
+    <div class="core-question">
+      <div class="cq-label">Core question</div>
+      <p class="cq-text">Can we identify a transcriptomic or functional signature that distinguishes neuroprotective from neurotoxic microglial states in ALS — and could that signature serve as a tractable therapeutic target or early biomarker?</p>
+    </div>
+
+    <div class="subqs">
+      <div class="subqs-title">Guiding sub-questions</div>
+      <div class="subq-item">
+        <span class="subq-num">S1</span>
+        <p class="subq-text">Which gene modules or cell states are consistently dysregulated in ALS microglia across multiple datasets — and do they cluster around known inflammatory pathways (complement, TLR, NFκB)?</p>
+      </div>
+      <div class="subq-item">
+        <span class="subq-num">S2</span>
+        <p class="subq-text">Is there a minimal transcriptomic signature (gene set or cell state classifier) that separates ALS microglia from healthy controls with high specificity?</p>
+      </div>
+      <div class="subq-item">
+        <span class="subq-num">S3</span>
+        <p class="subq-text">What would a therapeutic intervention look like — gene therapy, small molecule, or antibody — targeting the identified microglial state? What is the translational path?</p>
+      </div>
+    </div>
+
+    <div class="datasets-block">
+      <div class="datasets-title">Available datasets</div>
+      <div class="dataset-chips">
+        <span class="dchip">GSE21138</span>
+        <span class="dchip">GSE17612</span>
+        <span class="dchip">Human Cell Atlas — Microglia</span>
+        <span class="dchip">10x Genomics — CNS</span>
+        <span class="dchip">OpenScience Datasets</span>
+        <span class="dchip">CommonMind Consortium</span>
+      </div>
+    </div>
+
+    <div class="refs-block">
+      <div class="refs-title">Key references</div>
+      <p class="ref-item">Dantzer R et al. From inflammation to sickness and depression. <em>Nat Rev Neurosci.</em> 2008.</p>
+      <p class="ref-item">Kelley KW et al. Cytokine-induced sickness behavior. <em>Brain Behav Immun.</em> 2003.</p>
+      <p class="ref-item">Masuda T et al. Spatial and temporal heterogeneity of mouse and human microglia at single-cell resolution. <em>Nature.</em> 2019.</p>
+    </div>
+  </div>
+
+  <!-- CHALLENGE 02 -->
+  <div class="challenge-full" id="ch02">
+    <div class="challenge-full-header">
+      <div class="ch-number-big">02</div>
+      <div class="ch-title-block">
+        <span class="ch-tag tag-icm" style="margin-bottom:10px;display:inline-block">Paris Brain Institute</span>
+        <div class="ch-full-title">NeuroOncology &amp; Glioblastoma</div>
+        <p class="ch-full-desc">Glioblastoma (GBM) is the most aggressive primary brain tumour, with a median survival of 15 months. Its immune microenvironment — dominated by immunosuppressive microglia and tumour-associated macrophages — is a major obstacle to effective immunotherapy. This challenge asks teams to characterise the spatial and cellular heterogeneity of the GBM immune microenvironment and propose strategies to overcome immunosuppression.</p>
+      </div>
+    </div>
+
+    <div class="core-question">
+      <div class="cq-label">Core question</div>
+      <p class="cq-text">Can spatial and single-cell transcriptomics reveal actionable immune microenvironment subtypes in GBM — and what therapeutic strategies (CAR-T, checkpoint, cytokine engineering) do those subtypes suggest?</p>
+    </div>
+
+    <div class="subqs">
+      <div class="subqs-title">Guiding sub-questions</div>
+      <div class="subq-item">
+        <span class="subq-num">S1</span>
+        <p class="subq-text">What are the dominant immune cell populations in the GBM microenvironment, and how do their spatial distributions relate to tumour core vs. infiltrating edge?</p>
+      </div>
+      <div class="subq-item">
+        <span class="subq-num">S2</span>
+        <p class="subq-text">Can we identify transcriptomic signatures of immunosuppressive vs. inflammatory tumour-associated macrophage (TAM) states — and what upstream regulators drive the switch?</p>
+      </div>
+      <div class="subq-item">
+        <span class="subq-num">S3</span>
+        <p class="subq-text">Which immune subtypes would be most amenable to existing or novel therapeutic targeting? Propose a prioritised intervention strategy with a translational rationale.</p>
+      </div>
+    </div>
+
+    <div class="datasets-block">
+      <div class="datasets-title">Available datasets</div>
+      <div class="dataset-chips">
+        <span class="dchip">10x Visium — GBM spatial</span>
+        <span class="dchip">TCGA-GBM</span>
+        <span class="dchip">GEO: GSE84465</span>
+        <span class="dchip">CGGA (Chinese Glioma Genome Atlas)</span>
+        <span class="dchip">CommonMind</span>
+        <span class="dchip">Ivy GAP (Allen Brain)</span>
+      </div>
+    </div>
+
+    <div class="refs-block">
+      <div class="refs-title">Key references</div>
+      <p class="ref-item">Neftel C et al. An integrative model of cellular states, plasticity, and genetics for human glioblastoma. <em>Cell.</em> 2019.</p>
+      <p class="ref-item">Darmanis S et al. Single-cell RNA-seq analysis of infiltrating neoplastic cells at the migrating front of human glioblastoma. <em>Cell Rep.</em> 2017.</p>
+      <p class="ref-item">Ginhoux F et al. Fate mapping analysis reveals that adult microglia derive from primitive macrophages. <em>Science.</em> 2010.</p>
+    </div>
+  </div>
+
+  <!-- CHALLENGE 03 -->
+  <div class="challenge-full" id="ch03">
+    <div class="challenge-full-header">
+      <div class="ch-number-big">03</div>
+      <div class="ch-title-block">
+        <span class="ch-tag tag-dp" style="margin-bottom:10px;display:inline-block">Digital Phenotyping × Mental Health</span>
+        <div class="ch-full-title">Digital Phenotyping Meets Biology</div>
+        <p class="ch-full-desc">Inflammation-driven "sickness behavior" — fatigue, anhedonia, psychomotor slowing, sleep disruption, appetite change — is a well-characterised neuro-immune phenomenon. Standard mood trackers can't distinguish it from garden-variety depression. This challenge asks teams to design, and optionally prototype, a digital phenotyping product that specifically detects the cytokine-driven pattern — and sketch what a real validation study would look like.</p>
+      </div>
+    </div>
+
+    <div class="core-question">
+      <div class="cq-label">Core question</div>
+      <p class="cq-text">Can a low-friction digital phenotyping product that combines passive wearable signals and an engaging active self-report layer surrogate-detect the cytokine-driven "sickness behavior" pattern specifically — rather than just detecting low mood in general? How do you validate it? And could it become an early-warning or triage product?</p>
+    </div>
+
+    <div class="subqs">
+      <div class="subqs-title">Three guiding sub-questions, in order</div>
+      <div class="subq-item">
+        <span class="subq-num">S1 · Signal design</span>
+        <p class="subq-text">Which combination of passive and active signals would plausibly capture the sickness-behavior cluster (fatigue, anhedonia, sleep disruption, appetite change, psychomotor slowing) as distinct from a general low-mood/depression pattern? What is the minimal signal set specific to inflammation-driven presentation rather than a generic mood tracker?</p>
+      </div>
+      <div class="subq-item">
+        <span class="subq-num">S2 · Engagement</span>
+        <p class="subq-text">How do you design the active self-report layer so daily adherence stays high enough for the signal to be useful over weeks, not just a one-off survey? (e.g. a "virtual pet" or avatar whose state visibly responds to the user's mood/energy self-report as a retention hook)</p>
+      </div>
+      <div class="subq-item">
+        <span class="subq-num">S3 · Validation</span>
+        <p class="subq-text">What would the actual study look like to confirm the digital phenotype tracks real biology? What would count as success? Consider linking flagged digital patterns to bulk RNA-seq immune-gene signatures, or using synthetic paired data calibrated to real published effect sizes (e.g. Koeneman et al., Hirten et al.).</p>
+      </div>
+    </div>
+
+    <div style="background:#F9FAFB;border-radius:12px;padding:20px 24px;margin:24px 0;border:1px solid #E5E7EB">
+      <div class="datasets-title" style="margin-bottom:8px">Product concept ideas</div>
+      <p style="font-size:13px;color:#374151;line-height:1.7">Teams could build a consumer or clinical monitoring product with up to three layers: <strong>(1) a passive wearable layer</strong> — an app/smartwatch pairing capturing HRV, sleep, and activity; <strong>(2) an optional visual layer</strong> — a daily photo or 5-second video capturing skin and eye appearance; <strong>(3) an engaging self-report layer</strong> — daily logging with a retention hook (e.g. a "virtual pet" that responds to your reported mood/energy). No real dataset is strictly necessary — this can be a design/concept track, but teams can also use real data from participants on-site.</p>
+    </div>
+
+    <div class="datasets-block">
+      <div class="datasets-title">Available datasets</div>
+      <div class="dataset-chips">
+        <span class="dchip"><a href="https://www.nature.com/articles/s41597-025-05801-3" target="_blank">Baigutanova 2025 — HRV + PHQ-9 (n=49, 4wk)</a></span>
+        <span class="dchip"><a href="https://datasets.simula.no/pmdata/" target="_blank">PMData (Simula) — Fitbit + wellness diary</a></span>
+        <span class="dchip"><a href="https://www.kaggle.com/datasets/orvile/wesad-wearable-stress-affect-detection-dataset" target="_blank">WESAD — wearable stress + affect</a></span>
+        <span class="dchip"><a href="https://physionet.org/content/wearable-device-dataset/1.0.1/" target="_blank">PhysioNet — induced stress sessions</a></span>
+        <span class="dchip"><a href="https://github.com/openmedlab/Awesome-Medical-Dataset/blob/main/resources/DEAP.md" target="_blank">DEAP — video + EEG emotion</a></span>
+        <span class="dchip"><a href="https://mahnob-db.eu/" target="_blank">MAHNOB-HCI — multimodal affect</a></span>
+        <span class="dchip"><a href="https://cs.ru.nl/~skoldijk/SWELL-KW/Dataset.html" target="_blank">SWELL-KW — stress + wellbeing</a></span>
+        <span class="dchip"><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12939863/" target="_blank">RADAR-MDD — wearables in depression (n=623)</a></span>
+        <span class="dchip">Kaggle — smartwatch health datasets</span>
+      </div>
+    </div>
+
+    <div class="refs-block">
+      <div class="refs-title">Key references</div>
+      <p class="ref-item">Dantzer R, O'Connor JC, Freund GG et al. From inflammation to sickness and depression: when the immune system subjugates the brain. <em>Nat Rev Neurosci.</em> 2008.</p>
+      <p class="ref-item">Kelley KW, Bluthé RM, Dantzer R et al. Cytokine-induced sickness behavior. <em>Brain Behav Immun.</em> 2003.</p>
+      <p class="ref-item">Williams DP et al. Heart rate variability and inflammation: A meta-analysis of human studies. <em>Brain Behav Immun.</em> 2019.</p>
+      <p class="ref-item">Irwin MR, Olmstead R, Carroll JE. Sleep disturbance, sleep duration, and inflammation: A systematic review. <em>Biol Psychiatry.</em> 2016.</p>
+      <p class="ref-item">Berry N et al. Digital phenotyping for predicting relapse in psychiatric disorders. <em>BMC Psychiatry.</em> 2026.</p>
+      <p class="ref-item">Sleep and Activity Patterns in Depression From Wearable Data: Unsupervised Clustering Study — RADAR-MDD cohort. <em>JMIR.</em> 2026.</p>
+    </div>
+  </div>
+
+</section>
+
+<section class="cta-band">
+  <h2>Found your challenge?</h2>
+  <p>Apply now — 40 spots, selected from across Europe.</p>
+  <div class="cta-btns">
+    <a class="btn-primary" href="apply.html"><i class="ti ti-clipboard-list"></i>Apply to participate</a>
+    <a class="btn-white" href="index.html"><i class="ti ti-arrow-left"></i>Back to home</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-left">© 2026 <span>Nucleate Paris</span> × Nucleate London</div>
+  <div class="footer-right">Brain&amp;Mind Incubator · Paris, France</div>
+</footer>
+
+</body>
+</html>
