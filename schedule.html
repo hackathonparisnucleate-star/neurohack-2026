@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schedule · NeuroHack Paris 2026</title>
+  <meta name="description" content="How NeuroHack Paris 2026 works — format, schedule, and what to expect.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ── SCHEDULE PAGE ── */
+    .how-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:56px}
+    .how-card{background:#fff;border:1px solid #E5E7EB;border-radius:14px;padding:28px}
+    .how-card-icon{width:44px;height:44px;border-radius:10px;background:#F5F3FF;display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+    .how-card-icon i{font-size:22px;color:#7C3AED}
+    .how-card h3{font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;color:#111827;margin-bottom:8px}
+    .how-card p{font-size:13px;color:#6B7280;line-height:1.7}
+
+    /* ── TIMELINE ── */
+    .timeline{position:relative;padding-left:0}
+    .day-block{margin-bottom:40px}
+    .day-header{display:flex;align-items:center;gap:16px;margin-bottom:20px}
+    .day-badge{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:13px;background:#07091A;color:#7C3AED;padding:6px 16px;border-radius:6px;white-space:nowrap;border:1px solid rgba(124,58,237,0.3)}
+    .day-title{font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;color:#111827}
+    .day-sub{font-size:13px;color:#6B7280;margin-top:2px}
+    .day-line{flex:1;height:1px;background:#E5E7EB}
+
+    .events{display:flex;flex-direction:column;gap:0;padding-left:24px;border-left:2px solid #EDE9FE}
+    .event{display:flex;gap:20px;padding-bottom:20px;position:relative}
+    .event::before{content:'';position:absolute;left:-29px;top:5px;width:12px;height:12px;border-radius:50%;background:#7C3AED;border:2px solid #fff;box-shadow:0 0 0 2px #EDE9FE}
+    .event-time{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:500;color:#7C3AED;white-space:nowrap;padding-top:2px;min-width:90px}
+    .event-body{}
+    .event-title{font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:600;color:#111827;margin-bottom:3px}
+    .event-desc{font-size:12px;color:#6B7280;line-height:1.6}
+    .event-tag{display:inline-block;font-size:10px;font-weight:500;padding:2px 8px;border-radius:4px;margin-top:5px;font-family:'JetBrains Mono',monospace;letter-spacing:0.5px}
+    .tag-kick{background:#FEF3C7;color:#92400E}
+    .tag-hack{background:#D1FAE5;color:#065F46}
+    .tag-pitch{background:#EDE9FE;color:#5B21B6}
+    .tag-net{background:#DBEAFE;color:#1E40AF}
+    .tag-prep{background:#FCE7F3;color:#9D174D}
+
+    /* ── PRE-EVENT ── */
+    .pre-event{background:#07091A;border-radius:14px;padding:24px 28px;display:flex;align-items:center;gap:20px;margin-bottom:40px}
+    .pre-event-icon{width:44px;height:44px;border-radius:10px;background:rgba(124,58,237,0.2);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .pre-event-icon i{font-size:22px;color:#A78BFA}
+    .pre-event-title{font-family:'Space Grotesk',sans-serif;font-size:14px;font-weight:600;color:#fff;margin-bottom:4px}
+    .pre-event-text{font-size:13px;color:#94A3B8;line-height:1.6}
+
+    @media(max-width:768px){
+      .how-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="nav-logo" href="index.html">Neuro<span>Hack</span> Paris</a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="team.html">Team</a>
+    <a href="challenges.html">Challenges</a>
+    <a href="tracks.html">Tracks</a>
+    <a href="schedule.html" class="active">Schedule</a>
+    <a href="apply.html" class="nav-cta">Apply now</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="eyebrow">// format &amp; schedule</div>
+  <h1>How NeuroHack works</h1>
+  <p>A 36-hour sprint from Friday evening to Sunday evening — structured enough to be productive, open enough to be bold. Here's what to expect.</p>
+</div>
+
+<!-- HOW IT WORKS — overview cards -->
+<section class="section">
+  <div class="section-header">
+    <div class="eyebrow">// how it works</div>
+    <h2 class="section-title">From application to award</h2>
+  </div>
+  <div class="steps-grid" style="grid-template-columns:repeat(5,1fr)">
+    <div class="step">
+      <div class="step-circle">1</div>
+      <h4>Apply</h4>
+      <p>Fill in the form — solo or as a team. 40 participants selected from across Europe.</p>
+    </div>
+    <div class="step">
+      <div class="step-circle">2</div>
+      <h4>Build your team</h4>
+      <p>One week before, connect with other participants on Slack or Discord and form your team around a challenge.</p>
+    </div>
+    <div class="step">
+      <div class="step-circle">3</div>
+      <h4>Fork &amp; get ready</h4>
+      <p>Read the challenge briefs, explore starter notebooks, and fork the repo before you arrive.</p>
+      <code>gh repo fork hackathonparisnucleate-star/neurohack-2026</code>
+    </div>
+    <div class="step">
+      <div class="step-circle">4</div>
+      <h4>Hack Fri → Sun</h4>
+      <p>36 hours on-site. AWS compute, on-site mentors from Servier and ICM. Push hard.</p>
+    </div>
+    <div class="step">
+      <div class="step-circle">5</div>
+      <h4>Pitch &amp; win</h4>
+      <p>Sunday afternoon: 5-minute pitch to the jury. Best teams win prizes and incubator access.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FULL SCHEDULE -->
+<section class="section section-alt">
+  <div class="section-header">
+    <div class="eyebrow">// 9–11 october 2026</div>
+    <h2 class="section-title">Full schedule</h2>
+    <p class="section-sub">From team formation the week before to the closing drinks on Sunday evening.</p>
+  </div>
+
+  <!-- PRE-EVENT -->
+  <div class="pre-event">
+    <div class="pre-event-icon"><i class="ti ti-calendar-event"></i></div>
+    <div>
+      <div class="pre-event-title">1 week before — Team formation</div>
+      <p class="pre-event-text">Accepted participants are connected via Slack or Discord. Teams self-organise around the three challenge subjects ahead of the event, so everyone arrives ready to hack from day one.</p>
+    </div>
+  </div>
+
+  <!-- DAY 1 -->
+  <div class="day-block">
+    <div class="day-header">
+      <div class="day-badge">Friday 9 Oct</div>
+      <div>
+        <div class="day-title">Kick-off</div>
+        <div class="day-sub">Evening · 6pm – 10pm</div>
+      </div>
+      <div class="day-line"></div>
+    </div>
+    <div class="events">
+      <div class="event">
+        <div class="event-time">6:00 pm</div>
+        <div class="event-body">
+          <div class="event-title">Welcome &amp; Nucleate introduction</div>
+          <div class="event-desc">The organising team opens the event. Nucleate Paris presents the mission and format (10 min).</div>
+          <span class="event-tag tag-kick">KICK-OFF</span>
+        </div>
+      </div>
+      <div class="event">
+        <div class="event-time">6:15 pm</div>
+        <div class="event-body">
+          <div class="event-title">Jury introductions</div>
+          <div class="event-desc">Each jury member introduces themselves briefly (2–3 min each) — VCs, pharma leads, and academic researchers.</div>
+          <span class="event-tag tag-kick">KICK-OFF</span>
+        </div>
+      </div>
+      <div class="event">
+        <div class="event-time">6:45 pm</div>
+        <div class="event-body">
+          <div class="event-title">Main sponsor keynote — Servier</div>
+          <div class="event-desc">Servier presents the scientific and strategic context of the challenge (10–20 min).</div>
+          <span class="event-tag tag-kick">KEYNOTE</span>
+        </div>
+      </div>
+      <div class="event">
+        <div class="event-time">7:30 pm</div>
+        <div class="event-body">
+          <div class="event-title">Challenge briefings &amp; team formation</div>
+          <div class="event-desc">Teams confirm their challenge and track. Meet your team, meet your mentors.</div>
+          <span class="event-tag tag-hack">HACKING</span>
+        </div>
+      </div>
+      <div class="event">
+        <div class="event-time">8:00 pm</div>
+        <div class="event-body">
+          <div class="event-title">Hacking begins + networking drinks</div>
+          <div class="event-desc">The clock starts. Informal drinks and mingling alongside the first hours of hacking.</div>
+          <span class="event-tag tag-net">NETWORKING</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 2 -->
+  <div class="day-block">
+    <div class="day-header">
+      <div class="day-badge">Saturday 10 Oct</div>
+      <div>
+        <div class="day-title">The main hack day</div>
+        <div class="day-sub">Full day · 9am – 10pm</div>
+      </div>
+      <div class="day-line"></div>
+    </div>
+    <div class="events">
+      <div class="event">
+        <div class="event-time">9:00 am</div>
+        <div class="event-body">
+          <div class="event-title">IT support &amp; compute setup</div>
+          <div class="event-desc">AWS solutions architect Katia Kissin presents the compute environment — GPU access, Jupyter notebooks, coding agent setup, and available frameworks (1 hour).</div>
+          <span class="event-tag tag-hack">TECHNICAL</span>
+        </div>
+      </div>
+      <div class="event">
+        <div class="event-time">10:00 am</div>
+        <div class="event-body">
+          <div class="event-title">Hacking — morning session</div>
+          <div class="event-desc">Full hack session. Mentors from Servier and Paris Brain Institute on-site from 10am–2pm for questions and guidance.</div>
+          <span class="event-tag tag-hack">HACKING</span>
+        </div>
+      </div>
+      <div class="event">
+        <div class="event-time">12:00 pm</div>
+        <div class="event-body">
+          <div class="event-title">Lunch (in the background)</div>
+          <div class="event-desc">Food served on-site — teams keep working, no formal break.</div>
+        </div>
+      </div>
+      <div class="event">
+        <div class="event-time">2:00 pm</div>
+        <div class="event-body">
+          <div class="event-title">How to pitch — session</div>
+          <div class="event-desc">Organising team and jury run a 1-hour session on how to structure a 5-minute pitch and what the jury will be looking for on Sunday.</div>
+          <span class="event-tag tag-pitch">PITCH PREP</span>
+        </div>
+      </div>
+      <div class="event">
+        <div class="event-time">3:00 pm</div>
+        <div class="event-body">
+          <div class="event-title">Hacking — afternoon &amp; evening session</div>
+          <div class="event-desc">The longest stretch. Teams push hard toward a working prototype or solid research proposal.</div>
+          <span class="event-tag tag-hack">HACKING</span>
+        </div>
+      </div>
+      <div class="event">
+        <div class="event-time">10:00 pm</div>
+        <div class="event-body">
+          <div class="event-title">End of Day 2</div>
+          <div class="event-desc">Hacking wraps up for the night. Rest up — final day starts early.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DAY 3 -->
+  <div class="day-block">
+    <div class="day-header">
+      <div class="day-badge">Sunday 11 Oct</div>
+      <div>
+        <div class="day-title">Presentations &amp; closing</div>
+        <div class="day-sub">Full day · 9am – 7pm</div>
+      </div>
+      <div class="day-line"></div>
+    </div>
+    <div class="events">
+      <div class="event">
+        <div class="event-time">9:00 am</div>
+        <div class="event-body">
+          <div class="event-title">Final checks &amp; slide preparation</div>
+          <div class="event-desc">Teams finalise their work and prepare their pitch deck. All decks submitted by 1pm sharp.</div>
+          <span class="event-tag tag-prep">FINAL SPRINT</span>
+        </div>
+      </div>
+      <div class="event">
+        <div class="event-time">1:00 pm</div>
+        <div class="event-body">
+          <div class="event-title">Submission deadline</div>
+          <div class="event-desc">Pull requests closed. All decks submitted. No exceptions.</div>
+          <span class="event-tag tag-pitch">DEADLINE</span>
+        </div>
+      </div>
+      <div class="event">
+        <div class="event-time">2:00 pm</div>
+        <div class="event-body">
+          <div class="event-title">Team presentations</div>
+          <div class="event-desc">Each team gets 5 minutes to pitch, followed by up to 10 minutes of questions from the jury. All presentations done by 5pm.</div>
+          <span class="event-tag tag-pitch">PITCHING</span>
+        </div>
+      </div>
+      <div class="event">
+        <div class="event-time">5:00 pm</div>
+        <div class="event-body">
+          <div class="event-title">Jury deliberation</div>
+          <div class="event-desc">Jury meets privately to decide. Participants enjoy networking and drinks.</div>
+          <span class="event-tag tag-net">NETWORKING</span>
+        </div>
+      </div>
+      <div class="event">
+        <div class="event-time">6:00 pm</div>
+        <div class="event-body">
+          <div class="event-title">Awards &amp; closing</div>
+          <div class="event-desc">Winners announced. Prizes awarded. Closing remarks from the organising team and sponsors.</div>
+          <span class="event-tag tag-kick">CEREMONY</span>
+        </div>
+      </div>
+      <div class="event">
+        <div class="event-time">6:00 pm</div>
+        <div class="event-body">
+          <div class="event-title">Networking &amp; drinks</div>
+          <div class="event-desc">The evening closes with an open networking session — participants, jury, mentors, and sponsors. Until 7pm.</div>
+          <span class="event-tag tag-net">NETWORKING</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- FLOATING CONTACT -->
+<div class="contact-fab" id="contactFab">
+  <div class="contact-options" id="contactOptions">
+    <a class="contact-option" href="mailto:hackathonparis.nucleate@gmail.com">
+      <i class="ti ti-mail"></i>
+      <div class="contact-option-text">
+        <span class="contact-option-label">Email us</span>
+        <span class="contact-option-value">hackathonparis.nucleate@gmail.com</span>
+      </div>
+    </a>
+    <a class="contact-option" href="https://www.linkedin.com/in/rachele-rubiu/" target="_blank">
+      <i class="ti ti-brand-linkedin"></i>
+      <div class="contact-option-text">
+        <span class="contact-option-label">LinkedIn</span>
+        <span class="contact-option-value">Rachele Rubiu</span>
+      </div>
+    </a>
+    <a class="contact-option" href="https://www.linkedin.com/in/gabriel-michaux/" target="_blank">
+      <i class="ti ti-brand-linkedin"></i>
+      <div class="contact-option-text">
+        <span class="contact-option-label">LinkedIn</span>
+        <span class="contact-option-value">Gabriel Michaux</span>
+      </div>
+    </a>
+    <a class="contact-option" href="https://www.linkedin.com/in/shirine-merlo/" target="_blank">
+      <i class="ti ti-brand-linkedin"></i>
+      <div class="contact-option-text">
+        <span class="contact-option-label">LinkedIn</span>
+        <span class="contact-option-value">Shirine Merlo</span>
+      </div>
+    </a>
+  </div>
+  <button class="contact-fab-btn" onclick="document.getElementById('contactOptions').classList.toggle('open')">
+    <i class="ti ti-message-circle" id="fabIcon"></i>
+  </button>
+</div>
+
+<section class="cta-band">
+  <h2>Ready to hack the brain?</h2>
+  <p>Applications open for PhD students, post-docs and researchers across Europe.</p>
+  <div class="cta-btns">
+    <a class="btn-primary" href="apply.html"><i class="ti ti-clipboard-list"></i>Apply to participate</a>
+    <a class="btn-white" href="challenges.html"><i class="ti ti-flask"></i>View challenges</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-left">© 2026 <span>Nucleate Paris</span></div>
+  <div class="footer-right">Brain&amp;Mind Incubator · Paris, France</div>
+</footer>
+
+<script>
+const btn = document.querySelector(".contact-fab-btn");
+const opts = document.getElementById("contactOptions");
+const icon = document.getElementById("fabIcon");
+btn.addEventListener("click", () => {
+  const isOpen = opts.classList.contains("open");
+  icon.className = isOpen ? "ti ti-message-circle" : "ti ti-x";
+});
+document.addEventListener("click", (e) => {
+  if (!document.getElementById("contactFab").contains(e.target)) {
+    opts.classList.remove("open");
+    icon.className = "ti ti-message-circle";
+  }
+});
+</script>
+</body>
+</html>
