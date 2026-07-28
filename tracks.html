@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tracks · NeuroHack Paris 2026</title>
+  <meta name="description" content="The two competition tracks at NeuroHack Paris 2026 — AI/Bioinformatics and Blue Sky.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .track-full{border-radius:20px;padding:48px;margin-bottom:24px;border:1.5px solid}
+    .track-full-ai{background:#F5F3FF;border-color:#C4B5FD}
+    .track-full-bs{background:#EFF6FF;border-color:#BFDBFE}
+    .track-full-header{display:flex;align-items:flex-start;gap:24px;margin-bottom:28px}
+    .track-full-icon{width:64px;height:64px;border-radius:16px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .track-ai .track-full-icon,.track-full-ai .track-full-icon{background:#DDD6FE}
+    .track-full-bs .track-full-icon{background:#BFDBFE}
+    .track-full-icon i{font-size:30px}
+    .track-full-ai .track-full-icon i{color:#5B21B6}
+    .track-full-bs .track-full-icon i{color:#1E40AF}
+    .track-full-badge{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;padding:4px 12px;border-radius:4px;margin-bottom:10px;letter-spacing:1px}
+    .track-full-ai .track-full-badge{background:#DDD6FE;color:#5B21B6}
+    .track-full-bs .track-full-badge{background:#BFDBFE;color:#1E40AF}
+    .track-full-title{font-family:'Space Grotesk',sans-serif;font-size:28px;font-weight:700;margin-bottom:8px}
+    .track-full-ai .track-full-title{color:#4C1D95}
+    .track-full-bs .track-full-title{color:#1E3A5F}
+    .track-full-tagline{font-size:15px;color:#6B7280;font-style:italic}
+    .track-divider{height:1px;background:rgba(0,0,0,0.08);margin:28px 0}
+    .track-cols{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+    .track-col-title{font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:600;color:#374151;letter-spacing:0.3px;margin-bottom:12px}
+    .track-col-text{font-size:14px;color:#374151;line-height:1.75}
+    .track-output-box{border-radius:10px;padding:16px 18px;margin-top:20px}
+    .track-full-ai .track-output-box{background:#EDE9FE}
+    .track-full-bs .track-output-box{background:#DBEAFE}
+    .track-output-label{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;letter-spacing:1.5px;margin-bottom:8px}
+    .track-full-ai .track-output-label{color:#5B21B6}
+    .track-full-bs .track-output-label{color:#1E40AF}
+    .track-output-items{display:flex;flex-wrap:wrap;gap:8px}
+    .track-output-item{font-size:12px;padding:4px 12px;border-radius:20px;font-family:'Space Grotesk',sans-serif;font-weight:500}
+    .track-full-ai .track-output-item{background:#DDD6FE;color:#4C1D95}
+    .track-full-bs .track-output-item{background:#BFDBFE;color:#1E3A5F}
+    .jury-note{background:#07091A;border-radius:12px;padding:20px 24px;margin-top:20px;display:flex;gap:14px;align-items:flex-start}
+    .jury-note i{color:#7C3AED;font-size:20px;flex-shrink:0;margin-top:2px}
+    .jury-note p{font-size:13px;color:#94A3B8;line-height:1.65;margin:0}
+    .jury-note strong{color:#fff}
+    @media(max-width:768px){.track-cols{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="nav-logo" href="index.html">Neuro<span>Hack</span> Paris</a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="team.html">Team</a>
+    <a href="challenges.html">Challenges</a>
+    <a href="tracks.html" class="active">Tracks</a>
+    <a href="schedule.html">Schedule</a>
+    <a href="apply.html" class="nav-cta">Apply now</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="eyebrow">// competition tracks</div>
+  <h1>Two tracks, one theme</h1>
+  <p>Every team picks one challenge subject and one track. The track defines your approach and what you'll be judged on — not which problem you work on.</p>
+</div>
+
+<section class="section">
+
+  <!-- AI TRACK -->
+  <div class="track-full track-full-ai">
+    <div class="track-full-header">
+      <div class="track-full-icon"><i class="ti ti-cpu"></i></div>
+      <div>
+        <div class="track-full-badge">AI / BIOINFORMATICS TRACK</div>
+        <div class="track-full-title">Build something that runs</div>
+        <div class="track-full-tagline">For researchers who want to build a working computational output over the weekend</div>
+      </div>
+    </div>
+
+    <div class="track-divider"></div>
+
+    <div class="track-cols">
+      <div>
+        <div class="track-col-title">WHAT YOU'LL DO</div>
+        <p class="track-col-text">Teams in the AI track work toward a functional computational prototype — something that actually runs on real or synthetic data by Sunday. AWS GPU compute and shared Jupyter notebook environments are provided from day one, with a coding agent built directly into the notebook. You bring the ideas; we provide the infrastructure.</p>
+        <p class="track-col-text" style="margin-top:12px">This track rewards technical ambition and execution. You don't need to solve everything — a well-scoped, well-implemented prototype that demonstrates a clear idea is more valuable than a half-finished pipeline trying to do too much.</p>
+      </div>
+      <div>
+        <div class="track-col-title">WHAT YOU'LL BE JUDGED ON</div>
+        <p class="track-col-text">The jury will evaluate AI track submissions on three dimensions:</p>
+        <ul style="margin-top:10px;padding-left:16px;display:flex;flex-direction:column;gap:8px">
+          <li style="font-size:14px;color:#374151;line-height:1.6"><strong>Scientific relevance</strong> — does your approach address the challenge in a meaningful way?</li>
+          <li style="font-size:14px;color:#374151;line-height:1.6"><strong>Technical ambition</strong> — is the methodology novel or non-trivial?</li>
+          <li style="font-size:14px;color:#374151;line-height:1.6"><strong>Progress made</strong> — what did you actually build and demonstrate in 36 hours?</li>
+        </ul>
+        <div class="jury-note">
+          <i class="ti ti-info-circle"></i>
+          <p>You can go as deep into <strong>machine learning</strong> as you want — classifiers, clustering, generative models, synthetic data pipelines. The jury includes people who will understand the technical depth.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="track-output-box">
+      <div class="track-output-label">EXAMPLE OUTPUTS</div>
+      <div class="track-output-items">
+        <span class="track-output-item">Novel biomarker pipeline</span>
+        <span class="track-output-item">ML classifier on omics data</span>
+        <span class="track-output-item">Digital phenotyping prototype</span>
+        <span class="track-output-item">Closed-loop delivery system model</span>
+        <span class="track-output-item">Synthetic dataset + validation</span>
+        <span class="track-output-item">Spatial transcriptomics analysis</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLUESKY TRACK -->
+  <div class="track-full track-full-bs">
+    <div class="track-full-header">
+      <div class="track-full-icon"><i class="ti ti-telescope"></i></div>
+      <div>
+        <div class="track-full-badge">BLUE SKY TRACK</div>
+        <div class="track-full-title">Define what nobody has asked yet</div>
+        <div class="track-full-tagline">For researchers who want to propose a bold, original scientific direction</div>
+      </div>
+    </div>
+
+    <div class="track-divider"></div>
+
+    <div class="track-cols">
+      <div>
+        <div class="track-col-title">WHAT YOU'LL DO</div>
+        <p class="track-col-text">The Blue Sky track is for teams who want to think big without being constrained by what's immediately buildable. No code required. Instead, you'll develop a rigorous, original research proposal — a new therapeutic approach, a novel validation strategy, a bold hypothesis about neuro-immune interaction that hasn't been tested.</p>
+        <p class="track-col-text" style="margin-top:12px">Think of it as writing the grant proposal you wish existed. You'll still need to engage seriously with the science — hand-wavy ideas won't impress this jury. But the output is a compelling argument, not a working prototype.</p>
+      </div>
+      <div>
+        <div class="track-col-title">WHAT YOU'LL BE JUDGED ON</div>
+        <p class="track-col-text">The jury will evaluate Blue Sky submissions on three dimensions:</p>
+        <ul style="margin-top:10px;padding-left:16px;display:flex;flex-direction:column;gap:8px">
+          <li style="font-size:14px;color:#374151;line-height:1.6"><strong>Scientific originality</strong> — is this genuinely novel, or has it been proposed before?</li>
+          <li style="font-size:14px;color:#374151;line-height:1.6"><strong>Feasibility</strong> — is there a credible path from this idea to a real experiment or product?</li>
+          <li style="font-size:14px;color:#374151;line-height:1.6"><strong>Impact potential</strong> — if it works, how much does it matter?</li>
+        </ul>
+        <div class="jury-note">
+          <i class="ti ti-info-circle"></i>
+          <p>The best Blue Sky submissions often combine a <strong>bold scientific claim</strong> with a <strong>concrete first experiment</strong> — showing you know how to test the idea, not just imagine it.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="track-output-box">
+      <div class="track-output-label">EXAMPLE OUTPUTS</div>
+      <div class="track-output-items">
+        <span class="track-output-item">Novel gene therapy proposal</span>
+        <span class="track-output-item">New delivery mechanism</span>
+        <span class="track-output-item">Validation study design</span>
+        <span class="track-output-item">Translational roadmap</span>
+        <span class="track-output-item">New therapeutic target hypothesis</span>
+        <span class="track-output-item">Clinical triage product concept</span>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- FLOATING CONTACT -->
+<div class="contact-fab" id="contactFab">
+  <div class="contact-options" id="contactOptions">
+    <a class="contact-option" href="mailto:hackathonparis.nucleate@gmail.com">
+      <i class="ti ti-mail"></i>
+      <div class="contact-option-text">
+        <span class="contact-option-label">Email us</span>
+        <span class="contact-option-value">hackathonparis.nucleate@gmail.com</span>
+      </div>
+    </a>
+    <a class="contact-option" href="https://www.linkedin.com/in/rachele-rubiu/" target="_blank">
+      <i class="ti ti-brand-linkedin"></i>
+      <div class="contact-option-text">
+        <span class="contact-option-label">LinkedIn</span>
+        <span class="contact-option-value">Rachele Rubiu</span>
+      </div>
+    </a>
+    <a class="contact-option" href="https://www.linkedin.com/in/gabriel-michaux/" target="_blank">
+      <i class="ti ti-brand-linkedin"></i>
+      <div class="contact-option-text">
+        <span class="contact-option-label">LinkedIn</span>
+        <span class="contact-option-value">Gabriel Michaux</span>
+      </div>
+    </a>
+    <a class="contact-option" href="https://www.linkedin.com/in/shirine-merlo/" target="_blank">
+      <i class="ti ti-brand-linkedin"></i>
+      <div class="contact-option-text">
+        <span class="contact-option-label">LinkedIn</span>
+        <span class="contact-option-value">Shirine Merlo</span>
+      </div>
+    </a>
+  </div>
+  <button class="contact-fab-btn" onclick="document.getElementById('contactOptions').classList.toggle('open')">
+    <i class="ti ti-message-circle" id="fabIcon"></i>
+  </button>
+</div>
+
+<section class="cta-band">
+  <h2>Know your track?</h2>
+  <p>Apply now — 40 spots, selected from across Europe.</p>
+  <div class="cta-btns">
+    <a class="btn-primary" href="apply.html"><i class="ti ti-clipboard-list"></i>Apply to participate</a>
+    <a class="btn-white" href="challenges.html"><i class="ti ti-flask"></i>View challenges</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-left">© 2026 <span>Nucleate Paris</span></div>
+  <div class="footer-right">Brain&amp;Mind Incubator · Paris, France</div>
+</footer>
+
+<script>
+const btn = document.querySelector(".contact-fab-btn");
+const opts = document.getElementById("contactOptions");
+const icon = document.getElementById("fabIcon");
+btn.addEventListener("click", () => {
+  const isOpen = opts.classList.contains("open");
+  icon.className = isOpen ? "ti ti-message-circle" : "ti ti-x";
+});
+document.addEventListener("click", (e) => {
+  if (!document.getElementById("contactFab").contains(e.target)) {
+    opts.classList.remove("open");
+    icon.className = "ti ti-message-circle";
+  }
+});
+</script>
+</body>
+</html>
