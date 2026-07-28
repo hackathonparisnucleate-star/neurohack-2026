@@ -46,13 +46,14 @@
     </div>
   </div>
 
+
   <!-- RIGHT PANEL — FORM -->
   <div class="apply-right">
     <div class="form-card">
       <h2>Application form</h2>
       <p class="form-sub">Takes about 10 minutes. We'll be in touch within 2 weeks.</p>
 
-      <form id="applyForm" action="https://docs.google.com/forms/d/1HwLfJ8ffHjjHZ_t1d3R1aEABOpSd2pVLeZypE9Ic9xA/prefill" method="POST" target="_blank">
+      <form id="applyForm">
 
         <div class="form-row">
           <div class="form-group">
@@ -165,10 +166,23 @@
           <input type="text" id="dietary" name="entry.DIETARY" placeholder="e.g. vegetarian, gluten-free...">
         </div>
 
-        <button type="submit" class="submit-btn">
-          <i class="ti ti-send"></i>Submit application
+        <button type="submit" class="submit-btn" id="submitBtn">
+          <i class="ti ti-send" id="submitIcon"></i>
+          <span id="submitText">Submit application</span>
         </button>
         <p class="form-note">By submitting, you agree that your data will be used solely to process your application. We will not share it with third parties.</p>
+
+        <!-- Success message -->
+        <div id="successMsg" style="display:none;background:#D1FAE5;border:1px solid #6EE7B7;border-radius:10px;padding:20px 24px;margin-top:16px;text-align:center">
+          <i class="ti ti-circle-check" style="font-size:32px;color:#059669;display:block;margin-bottom:8px"></i>
+          <p style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:600;color:#065F46;margin-bottom:4px">Application submitted!</p>
+          <p style="font-size:13px;color:#047857;margin:0">We'll be in touch within 2 weeks. Don't forget to send your CV to <strong>hackathonparis.nucleate@gmail.com</strong></p>
+        </div>
+
+        <!-- Error message -->
+        <div id="errorMsg" style="display:none;background:#FEE2E2;border:1px solid #FCA5A5;border-radius:10px;padding:16px 20px;margin-top:16px">
+          <p style="font-size:13px;color:#991B1B;margin:0">Something went wrong. Please try again or email us directly at hackathonparis.nucleate@gmail.com</p>
+        </div>
 
       </form>
     </div>
@@ -192,6 +206,130 @@ function toggleTeam(isTeam) {
   document.getElementById('btn-team').classList.toggle('active', isTeam);
 }
 </script>
+
+<script>
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbx76vguCO-u708JR22WLTJKODY3IaCoD3XV24opPNBFpRlBAISzFniRmpMCStCSCS72/exec";
+
+let cvBase64 = null;
+let cvFileName = null;
+
+function handleCV(input) {
+  const file = input.files[0];
+  const errEl = document.getElementById("cvError");
+  const dropzone = document.getElementById("cvDropzone");
+  const label = document.getElementById("cvLabel");
+
+  cvBase64 = null; cvFileName = null;
+  errEl.style.display = "none";
+
+  if (!file) return;
+
+  if (file.type !== "application/pdf" || file.size > 5 * 1024 * 1024) {
+    errEl.style.display = "block";
+    dropzone.style.borderColor = "#DC2626";
+    return;
+  }
+
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    cvBase64 = e.target.result.split(",")[1];
+    cvFileName = file.name;
+    dropzone.style.borderColor = "#7C3AED";
+    dropzone.style.background = "#F5F3FF";
+    label.innerHTML = `
+      <i class="ti ti-file-check" style="font-size:24px;color:#7C3AED;display:block;margin-bottom:8px"></i>
+      <p style="font-size:13px;font-weight:500;color:#374151;margin:0">${file.name}</p>
+      <p style="font-size:11px;color:#7C3AED;margin:4px 0 0">${(file.size/1024/1024).toFixed(2)} MB · <span onclick="resetCV(event)" style="cursor:pointer;text-decoration:underline">Remove</span></p>`;
+  };
+  reader.readAsDataURL(file);
+}
+
+function resetCV(e) {
+  e.stopPropagation();
+  cvBase64 = null; cvFileName = null;
+  document.getElementById("cvFile").value = "";
+  document.getElementById("cvDropzone").style.borderColor = "#D1D5DB";
+  document.getElementById("cvDropzone").style.background = "#FAFAFA";
+  document.getElementById("cvLabel").innerHTML = `
+    <i class="ti ti-upload" style="font-size:24px;color:#7C3AED;display:block;margin-bottom:8px"></i>
+    <p style="font-size:13px;font-weight:500;color:#374151;margin:0">Click to upload your CV</p>
+    <p style="font-size:11px;color:#9CA3AF;margin:4px 0 0">PDF only · max 5MB</p>`;
+}
+
+document.getElementById("applyForm").addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  // Validate CV
+  if (!cvBase64) {
+    document.getElementById("cvError").style.display = "block";
+    document.getElementById("cvError").textContent = "Please upload your CV before submitting.";
+    document.getElementById("cvDropzone").style.borderColor = "#DC2626";
+    return;
+  }
+
+  const btn = document.getElementById("submitBtn");
+  const icon = document.getElementById("submitIcon");
+  const text = document.getElementById("submitText");
+  const successMsg = document.getElementById("successMsg");
+  const errorMsg = document.getElementById("errorMsg");
+
+  btn.disabled = true;
+  icon.className = "ti ti-loader-2";
+  icon.style.animation = "spin 1s linear infinite";
+  text.textContent = "Uploading CV & submitting...";
+  successMsg.style.display = "none";
+  errorMsg.style.display = "none";
+
+  const data = {
+    firstName:    document.getElementById("firstName").value,
+    lastName:     document.getElementById("lastName").value,
+    email:        document.getElementById("email").value,
+    institution:  document.getElementById("institution").value,
+    position:     document.getElementById("position").value,
+    applyingWith: document.querySelector('input[name="team_status"]:checked')?.value === "team" ? "Yes" : "No",
+    teamNames:    document.getElementById("team_names")?.value || "",
+    challenge:    document.getElementById("challenge").value,
+    track:        document.getElementById("track").value,
+    skills:       document.getElementById("skills").value,
+    motivation:   document.getElementById("motivation").value,
+    linkedin:     document.getElementById("linkedin").value,
+    github:       document.getElementById("github")?.value || "",
+    dietary:      document.getElementById("dietary")?.value || "",
+    cvBase64:     cvBase64,
+    cvFileName:   cvFileName
+  };
+
+  try {
+    const res = await fetch(APPS_SCRIPT_URL, {
+      method: "POST",
+      body: JSON.stringify(data)
+    });
+    const result = await res.json();
+    if (result.status === "success") {
+      successMsg.style.display = "block";
+      document.getElementById("applyForm").reset();
+      resetCV({stopPropagation:()=>{}});
+      document.getElementById("teamFields").style.display = "none";
+      document.getElementById("btn-solo").classList.add("active");
+      document.getElementById("btn-team").classList.remove("active");
+    } else {
+      throw new Error(result.message);
+    }
+  } catch(err) {
+    errorMsg.style.display = "block";
+  } finally {
+    btn.disabled = false;
+    icon.className = "ti ti-send";
+    icon.style.animation = "";
+    text.textContent = "Submit application";
+  }
+});
+</script>
+<style>
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+</style>
+
 </body>
 </html>
+
 
