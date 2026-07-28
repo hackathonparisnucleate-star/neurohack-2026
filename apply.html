@@ -13,10 +13,10 @@
   <a class="nav-logo" href="index.html">Neuro<span>Hack</span> Paris</a>
   <div class="nav-links">
     <a href="index.html">Home</a>
-    <a href="challenges.html">Challenges</a>
-    <a href="index.html#tracks">Tracks</a>
     <a href="team.html">Team</a>
-    <a href="index.html#how">How it works</a>
+    <a href="challenges.html">Challenges</a>
+    <a href="tracks.html">Tracks</a>
+    <a href="schedule.html">Schedule</a>
     <a href="apply.html" class="nav-cta active">Apply now</a>
   </div>
 </nav>
@@ -89,12 +89,35 @@
         </div>
 
         <div class="form-group">
+          <label>Are you applying with someone? <span class="required">*</span></label>
+          <div style="display:flex;gap:10px;margin-top:4px">
+            <label style="flex:1;cursor:pointer">
+              <input type="radio" name="team_status" value="solo" checked onchange="toggleTeam(false)" style="display:none">
+              <div class="team-toggle-btn active" id="btn-solo"><i class="ti ti-user" style="font-size:16px"></i> No, just me</div>
+            </label>
+            <label style="flex:1;cursor:pointer">
+              <input type="radio" name="team_status" value="team" onchange="toggleTeam(true)" style="display:none">
+              <div class="team-toggle-btn" id="btn-team"><i class="ti ti-users" style="font-size:16px"></i> Yes</div>
+            </label>
+          </div>
+        </div>
+
+        <div id="teamFields" style="display:none">
+          <div class="form-group">
+            <label for="team_names">Name(s) of your team member(s)</label>
+            <input type="text" id="team_names" name="entry.TEAM_NAMES" placeholder="e.g. Marie Curie, Pierre Curie">
+            <p style="font-size:11px;color:#9CA3AF;margin-top:5px">Don't worry if your team isn't finalised yet — you can still form or join a team during the pre-event week on Slack.</p>
+          </div>
+        </div>
+
+
+        <div class="form-group">
           <label for="challenge">Which challenge interests you most? <span class="required">*</span></label>
           <select id="challenge" name="entry.CHALLENGE" required>
             <option value="" disabled selected>Select a challenge</option>
             <option>01 — Microglia in ALS</option>
             <option>02 — NeuroOncology &amp; Glioblastoma</option>
-            <option>03 — Digital Phenotyping Meets Biology</option>
+            <option>03 — Digital Phenotyping Meets Psychiatric Biology</option>
             <option>Open to any</option>
           </select>
         </div>
@@ -123,7 +146,7 @@
           <label>CV / Resume <span class="required">*</span></label>
           <div style="border:1px solid #E5E7EB;border-radius:8px;padding:14px 16px;background:#F9FAFB;display:flex;align-items:center;gap:12px">
             <i class="ti ti-mail" style="font-size:20px;color:#7C3AED;flex-shrink:0"></i>
-            <p style="font-size:13px;color:#374151;line-height:1.6;margin:0">Please send your CV (PDF) to <a href="mailto:hackathonparis.nucleate@gmail.com" style="color:#7C3AED;font-weight:600">hackathonparis.nucleate@gmail.com</a> with the subject line <strong>NeuroHack 2026 — Your Name</strong>. Applications without a CV will not be considered.</p>
+            <p style="font-size:13px;color:#374151;line-height:1.6;margin:0">Please send your CV (PDF) to <a href="mailto:rachelerebr@nucleate.org" style="color:#7C3AED;font-weight:600">rachelerebr@nucleate.org</a> with the subject line <strong>NeuroHack 2026 — Your Name</strong>. Applications without a CV will not be considered.</p>
           </div>
         </div>
 
@@ -158,5 +181,17 @@
   <div class="footer-right">Brain&amp;Mind Incubator · Paris, France</div>
 </footer>
 
+<style>
+.team-toggle-btn{border:1.5px solid #D1D5DB;border-radius:8px;padding:10px;text-align:center;font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:500;color:#6B7280;display:flex;align-items:center;justify-content:center;gap:6px;transition:all .15s;background:#fff}
+.team-toggle-btn.active{border-color:#7C3AED;background:#F5F3FF;color:#7C3AED}
+</style>
+<script>
+function toggleTeam(isTeam) {
+  document.getElementById('teamFields').style.display = isTeam ? 'block' : 'none';
+  document.getElementById('btn-solo').classList.toggle('active', !isTeam);
+  document.getElementById('btn-team').classList.toggle('active', isTeam);
+}
+</script>
 </body>
 </html>
+
