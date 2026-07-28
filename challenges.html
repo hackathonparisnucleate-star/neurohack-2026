@@ -13,10 +13,10 @@
   <a class="nav-logo" href="index.html">Neuro<span>Hack</span> Paris</a>
   <div class="nav-links">
     <a href="index.html">Home</a>
-    <a href="challenges.html" class="active">Challenges</a>
-    <a href="index.html#tracks">Tracks</a>
     <a href="team.html">Team</a>
-    <a href="index.html#how">How it works</a>
+    <a href="challenges.html" class="active">Challenges</a>
+    <a href="tracks.html">Tracks</a>
+    <a href="schedule.html">Schedule</a>
     <a href="apply.html" class="nav-cta">Apply now</a>
   </div>
 </nav>
@@ -182,21 +182,21 @@
     <h2 class="section-title">Who's behind this</h2>
   </div>
   <div style="display:flex;flex-wrap:wrap;gap:24px;align-items:center">
-    <div style="background:#000;border-radius:12px;padding:16px 28px;display:flex;align-items:center;justify-content:center;height:72px">
+    <a href="https://nucleate.xyz" target="_blank" style="text-decoration:none;display:flex"><div style="background:#000;border-radius:12px;padding:16px 28px;display:flex;align-items:center;justify-content:center;height:72px">
       <img src="logos/nucleate.png" alt="Nucleate" style="height:32px;width:auto">
-    </div>
-    <div style="background:#fff;border:1px solid #E5E7EB;border-radius:12px;padding:16px 28px;display:flex;align-items:center;justify-content:center;height:72px">
+    </div></a>
+    <a href="https://icm-institute.org" target="_blank" style="text-decoration:none;display:flex"><div style="background:#fff;border:1px solid #E5E7EB;border-radius:12px;padding:16px 28px;display:flex;align-items:center;justify-content:center;height:72px">
       <img src="logos/icm.png" alt="Institut du Cerveau" style="height:44px;width:auto">
-    </div>
-    <div style="background:#fff;border:1px solid #E5E7EB;border-radius:12px;padding:16px 28px;display:flex;align-items:center;justify-content:center;height:72px">
+    </div></a>
+    <a href="https://aws.amazon.com" target="_blank" style="text-decoration:none;display:flex"><div style="background:#fff;border:1px solid #E5E7EB;border-radius:12px;padding:16px 28px;display:flex;align-items:center;justify-content:center;height:72px">
       <img src="logos/aws.png" alt="AWS" style="height:38px;width:auto">
-    </div>
-    <div style="background:#fff;border:1px solid #E5E7EB;border-radius:12px;padding:12px 20px;display:flex;align-items:center;justify-content:center;height:72px">
+    </div></a>
+    <a href="https://brainandmind.fr" target="_blank" style="text-decoration:none;display:flex"><div style="background:#fff;border:1px solid #E5E7EB;border-radius:12px;padding:12px 20px;display:flex;align-items:center;justify-content:center;height:72px">
       <img src="logos/brainmind.jpeg" alt="Brain &amp; Mind" style="height:52px;width:auto">
-    </div>
-    <div style="background:#fff;border:1px solid #E5E7EB;border-radius:12px;padding:16px 28px;display:flex;align-items:center;justify-content:center;height:72px">
+    </div></a>
+    <a href="https://www.servier.com" target="_blank" style="text-decoration:none;display:flex"><div style="background:#fff;border:1px solid #E5E7EB;border-radius:12px;padding:16px 28px;display:flex;align-items:center;justify-content:center;height:72px">
       <img src="logos/servier.png" alt="Servier" style="height:36px;width:auto">
-    </div>
+    </div></a>
     <div style="background:#fff;border:1px dashed #D1D5DB;border-radius:12px;padding:16px 28px;display:flex;align-items:center;justify-content:center;height:72px;opacity:.5">
       <div style="font-family:'Space Grotesk',sans-serif;font-size:13px;color:#9CA3AF">Your logo here</div>
     </div>
@@ -212,11 +212,65 @@
   </div>
 </section>
 
+
+<!-- FLOATING CONTACT -->
+<div class="contact-fab" id="contactFab">
+  <div class="contact-options" id="contactOptions">
+    <a class="contact-option" href="mailto:hackathonparis.nucleate@gmail.com">
+      <i class="ti ti-mail"></i>
+      <div class="contact-option-text">
+        <span class="contact-option-label">Email us</span>
+        <span class="contact-option-value">hackathonparis.nucleate@gmail.com</span>
+      </div>
+    </a>
+    <a class="contact-option" href="https://www.linkedin.com/in/rachele-rubiu/" target="_blank">
+      <i class="ti ti-brand-linkedin"></i>
+      <div class="contact-option-text">
+        <span class="contact-option-label">LinkedIn</span>
+        <span class="contact-option-value">Rachele Rubiu</span>
+      </div>
+    </a>
+    <a class="contact-option" href="https://www.linkedin.com/in/gabriel-michaux/" target="_blank">
+      <i class="ti ti-brand-linkedin"></i>
+      <div class="contact-option-text">
+        <span class="contact-option-label">LinkedIn</span>
+        <span class="contact-option-value">Gabriel Michaux</span>
+      </div>
+    </a>
+    <a class="contact-option" href="https://www.linkedin.com/in/shirine-merlo/" target="_blank">
+      <i class="ti ti-brand-linkedin"></i>
+      <div class="contact-option-text">
+        <span class="contact-option-label">LinkedIn</span>
+        <span class="contact-option-value">Shirine Merlo</span>
+      </div>
+    </a>
+  </div>
+  <button class="contact-fab-btn" onclick="document.getElementById('contactOptions').classList.toggle('open')">
+    <i class="ti ti-message-circle" id="fabIcon"></i>
+  </button>
+</div>
+
 <footer>
   <div class="footer-left">© 2026 <span>Nucleate Paris</span></div>
   <div class="footer-right">Brain&amp;Mind Incubator · Paris, France</div>
 </footer>
 
+<script>
+const btn = document.querySelector(".contact-fab-btn");
+const opts = document.getElementById("contactOptions");
+const icon = document.getElementById("fabIcon");
+btn.addEventListener("click", () => {
+  const isOpen = opts.classList.contains("open");
+  icon.className = isOpen ? "ti ti-message-circle" : "ti ti-x";
+});
+document.addEventListener("click", (e) => {
+  if (!document.getElementById("contactFab").contains(e.target)) {
+    opts.classList.remove("open");
+    icon.className = "ti ti-message-circle";
+  }
+});
+</script>
 </body>
 </html>
+
 
