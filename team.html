@@ -57,10 +57,10 @@
   <a class="nav-logo" href="index.html">Neuro<span>Hack</span> Paris</a>
   <div class="nav-links">
     <a href="index.html">Home</a>
-    <a href="challenges.html">Challenges</a>
-    <a href="index.html#tracks">Tracks</a>
     <a href="team.html" class="active">Team</a>
-    <a href="index.html#how">How it works</a>
+    <a href="challenges.html">Challenges</a>
+    <a href="tracks.html">Tracks</a>
+    <a href="schedule.html">Schedule</a>
     <a href="apply.html" class="nav-cta">Apply now</a>
   </div>
 </nav>
@@ -81,11 +81,22 @@
 
     <div class="team-card">
       <div class="team-photo">
-        <!-- Replace src with real photo: <img src="photos/rachele.jpg" alt="Rachele"> -->
-        <div class="team-photo-placeholder">
-          <i class="ti ti-user-circle"></i>
-          <span>PHOTO COMING</span>
+        <img src="photos/gabriel.png" alt="Gabriel" style="width:100%;height:100%;object-fit:cover">
+      </div>
+      <div class="team-info">
+        <div class="team-name">Gabriel Michaux</div>
+        <div class="team-role">Nucleate Paris · Co-organiser</div>
+        <p class="team-bio">CIFRE PhD candidate at the interface of Servier Oncology and the Paris Brain Institute (ICM), investigating spatial and cellular heterogeneity in Glioblastoma. His dual position in industry and academia gives NeuroHack a direct bridge between pharma and fundamental research.</p>
+        <div class="team-links">
+          <a class="team-link" href="mailto:gabrielm@nucleate.org"><i class="ti ti-mail"></i>Email</a>
+          <a class="team-link" href="https://www.linkedin.com/in/gabriel-michaux/" target="_blank"><i class="ti ti-brand-linkedin"></i>LinkedIn</a>
         </div>
+      </div>
+    </div>
+    
+    <div class="team-card">
+      <div class="team-photo">
+        <img src="photos/rachele.png" alt="Rachele" style="width:100%;height:100%;object-fit:cover">
       </div>
       <div class="team-info">
         <div class="team-name">Rachele Rebecca Rubiu</div>
@@ -98,32 +109,10 @@
       </div>
     </div>
 
-    <div class="team-card">
-      <div class="team-photo">
-        <!-- Replace src with real photo: <img src="photos/gabriel.jpg" alt="Gabriel"> -->
-        <div class="team-photo-placeholder">
-          <i class="ti ti-user-circle"></i>
-          <span>PHOTO COMING</span>
-        </div>
-      </div>
-      <div class="team-info">
-        <div class="team-name">Gabriel Michaux</div>
-        <div class="team-role">Nucleate Paris · Co-organiser</div>
-        <p class="team-bio">CIFRE PhD candidate at the interface of Servier Oncology and the Paris Brain Institute (ICM), investigating spatial and cellular heterogeneity in Glioblastoma. His dual position in industry and academia gives NeuroHack a direct bridge between pharma and fundamental research.</p>
-        <div class="team-links">
-          <a class="team-link" href="mailto:gabrielm@nucleate.org"><i class="ti ti-mail"></i>Email</a>
-          <a class="team-link" href="https://www.linkedin.com/in/gabriel-michaux/" target="_blank"><i class="ti ti-brand-linkedin"></i>LinkedIn</a>
-        </div>
-      </div>
-    </div>
 
     <div class="team-card">
       <div class="team-photo">
-        <!-- Replace src with real photo: <img src="photos/shirine.jpg" alt="Shirine"> -->
-        <div class="team-photo-placeholder">
-          <i class="ti ti-user-circle"></i>
-          <span>PHOTO COMING</span>
-        </div>
+        <img src="photos/shirine.png" alt="Shirine" style="width:100%;height:100%;object-fit:cover">
       </div>
       <div class="team-info">
         <div class="team-name">Shirine Merlo</div>
@@ -146,9 +135,9 @@
     <h2 class="section-title">About Nucleate</h2>
   </div>
   <div class="nucleate-block">
-    <div class="nucleate-logo-wrap">
+    <a href="https://nucleate.xyz" target="_blank" class="nucleate-logo-wrap" style="text-decoration:none">
       <img src="logos/nucleate.png" alt="Nucleate">
-    </div>
+    </a>
     <div class="nucleate-text">
       <h3>The global network for the next generation of biotech leaders</h3>
       <p>Nucleate is a non-profit, volunteer-led organisation dedicated to empowering PhD students and post-docs to build transformational biotech companies. Through its global network of chapters, Nucleate connects early-career scientists with the mentorship, community, and resources they need to turn bold scientific ideas into real ventures — whether in academia, industry, or entrepreneurship.</p>
@@ -173,9 +162,9 @@
 
   <!-- SERVIER -->
   <div class="sponsor-full">
-    <div class="sponsor-full-logo">
+    <a href="https://www.servier.com" target="_blank" class="sponsor-full-logo" style="text-decoration:none">
       <img src="logos/servier.png" alt="Servier">
-    </div>
+    </a>
     <div>
       <span class="sponsor-badge badge-main">Main Sponsor</span>
       <h3>Servier</h3>
@@ -185,9 +174,9 @@
 
   <!-- BRAIN & MIND -->
   <div class="sponsor-full">
-    <div class="sponsor-full-logo">
+    <a href="https://brainandmind.fr" target="_blank" class="sponsor-full-logo" style="text-decoration:none">
       <img src="logos/brainmind.jpeg" alt="Brain &amp; Mind">
-    </div>
+    </a>
     <div>
       <span class="sponsor-badge badge-venue">Venue Partner</span>
       <h3>Brain &amp; Mind</h3>
@@ -197,9 +186,9 @@
 
   <!-- AWS -->
   <div class="sponsor-full">
-    <div class="sponsor-full-logo" style="background:#fff">
+    <a href="https://aws.amazon.com" target="_blank" class="sponsor-full-logo" style="background:#fff;text-decoration:none">
       <img src="logos/aws.png" alt="AWS">
-    </div>
+    </a>
     <div>
       <span class="sponsor-badge badge-compute">Compute Partner</span>
       <h3>Amazon Web Services (AWS)</h3>
@@ -213,15 +202,69 @@
   <h2>Want to sponsor NeuroHack Paris?</h2>
   <p>We have open sponsorship slots. Get in touch with the organising team.</p>
   <div class="cta-btns">
-    <a class="btn-primary" href="mailto:hackathonparis.nucleate@gmail.com"><i class="ti ti-mail"></i>Contact us</a>
+    <a class="btn-primary" href="mailto:rachelerebr@nucleate.org"><i class="ti ti-mail"></i>Contact us</a>
     <a class="btn-white" href="apply.html"><i class="ti ti-clipboard-list"></i>Apply to participate</a>
   </div>
 </section>
+
+
+<!-- FLOATING CONTACT -->
+<div class="contact-fab" id="contactFab">
+  <div class="contact-options" id="contactOptions">
+    <a class="contact-option" href="mailto:hackathonparis.nucleate@gmail.com">
+      <i class="ti ti-mail"></i>
+      <div class="contact-option-text">
+        <span class="contact-option-label">Email us</span>
+        <span class="contact-option-value">hackathonparis.nucleate@gmail.com</span>
+      </div>
+    </a>
+    <a class="contact-option" href="https://www.linkedin.com/in/rachele-rubiu/" target="_blank">
+      <i class="ti ti-brand-linkedin"></i>
+      <div class="contact-option-text">
+        <span class="contact-option-label">LinkedIn</span>
+        <span class="contact-option-value">Rachele Rubiu</span>
+      </div>
+    </a>
+    <a class="contact-option" href="https://www.linkedin.com/in/gabriel-michaux/" target="_blank">
+      <i class="ti ti-brand-linkedin"></i>
+      <div class="contact-option-text">
+        <span class="contact-option-label">LinkedIn</span>
+        <span class="contact-option-value">Gabriel Michaux</span>
+      </div>
+    </a>
+    <a class="contact-option" href="https://www.linkedin.com/in/shirine-merlo/" target="_blank">
+      <i class="ti ti-brand-linkedin"></i>
+      <div class="contact-option-text">
+        <span class="contact-option-label">LinkedIn</span>
+        <span class="contact-option-value">Shirine Merlo</span>
+      </div>
+    </a>
+  </div>
+  <button class="contact-fab-btn" onclick="document.getElementById('contactOptions').classList.toggle('open')">
+    <i class="ti ti-message-circle" id="fabIcon"></i>
+  </button>
+</div>
 
 <footer>
   <div class="footer-left">© 2026 <span>Nucleate Paris</span></div>
   <div class="footer-right">Brain&amp;Mind Incubator · Paris, France</div>
 </footer>
 
+<script>
+const btn = document.querySelector(".contact-fab-btn");
+const opts = document.getElementById("contactOptions");
+const icon = document.getElementById("fabIcon");
+btn.addEventListener("click", () => {
+  const isOpen = opts.classList.contains("open");
+  icon.className = isOpen ? "ti ti-message-circle" : "ti ti-x";
+});
+document.addEventListener("click", (e) => {
+  if (!document.getElementById("contactFab").contains(e.target)) {
+    opts.classList.remove("open");
+    icon.className = "ti ti-message-circle";
+  }
+});
+</script>
 </body>
 </html>
+
