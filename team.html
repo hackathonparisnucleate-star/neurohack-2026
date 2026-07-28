@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team · NeuroHack Paris 2026</title>
+  <meta name="description" content="The organising team and sponsors behind NeuroHack Paris 2026.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ── TEAM PAGE SPECIFIC ── */
+    .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:8px}
+    .team-card{border-radius:16px;overflow:hidden;border:1px solid #E5E7EB;background:#fff}
+    .team-photo{width:100%;aspect-ratio:1/1;background:linear-gradient(135deg,#1E1B4B 0%,#4C1D95 50%,#7C3AED 100%);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+    .team-photo img{width:100%;height:100%;object-fit:cover}
+    .team-photo-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;opacity:.4}
+    .team-photo-placeholder i{font-size:48px;color:#fff}
+    .team-photo-placeholder span{font-size:11px;color:#fff;font-family:'JetBrains Mono',monospace;letter-spacing:1px}
+    .team-info{padding:24px}
+    .team-name{font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:700;color:#111827;margin-bottom:4px}
+    .team-role{font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:500;color:#7C3AED;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:12px}
+    .team-bio{font-size:13px;color:#6B7280;line-height:1.7}
+    .team-links{display:flex;gap:10px;margin-top:14px}
+    .team-link{display:inline-flex;align-items:center;gap:5px;font-size:12px;color:#7C3AED;font-weight:500;font-family:'Space Grotesk',sans-serif}
+    .team-link i{font-size:14px}
+
+    /* ── NUCLEATE BLOCK ── */
+    .nucleate-block{background:#07091A;border-radius:20px;padding:48px;display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center;margin-top:8px}
+    .nucleate-logo-wrap{background:#000;border-radius:14px;padding:20px 32px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .nucleate-logo-wrap img{height:36px;width:auto}
+    .nucleate-text h3{font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;color:#fff;margin-bottom:12px;letter-spacing:-0.4px}
+    .nucleate-text p{font-size:14px;color:#94A3B8;line-height:1.8;margin-bottom:20px}
+    .nucleate-stats{display:flex;gap:28px;flex-wrap:wrap}
+    .nucleate-stat-num{font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:700;color:#7C3AED}
+    .nucleate-stat-label{font-size:11px;color:#64748B;margin-top:2px}
+
+    /* ── SPONSORS ── */
+    .sponsor-full{background:#fff;border:1px solid #E5E7EB;border-radius:16px;padding:36px;margin-bottom:20px;display:grid;grid-template-columns:200px 1fr;gap:36px;align-items:center}
+    .sponsor-full-logo{display:flex;align-items:center;justify-content:center;padding:20px;background:#F9FAFB;border-radius:12px;border:1px solid #E5E7EB}
+    .sponsor-full-logo img{max-height:52px;max-width:160px;width:auto}
+    .sponsor-badge{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:600;padding:3px 10px;border-radius:4px;margin-bottom:12px;letter-spacing:1px}
+    .badge-main{background:#FEF3C7;color:#92400E}
+    .badge-venue{background:#D1FAE5;color:#065F46}
+    .badge-compute{background:#DBEAFE;color:#1E40AF}
+    .sponsor-full h3{font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;color:#111827;margin-bottom:10px}
+    .sponsor-full p{font-size:14px;color:#6B7280;line-height:1.75}
+
+    @media(max-width:768px){
+      .team-grid{grid-template-columns:1fr}
+      .nucleate-block{grid-template-columns:1fr}
+      .sponsor-full{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <a class="nav-logo" href="index.html">Neuro<span>Hack</span> Paris</a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="challenges.html">Challenges</a>
+    <a href="team.html" class="active">Team</a>
+    <a href="index.html#how">How it works</a>
+    <a href="apply.html" class="nav-cta">Apply now</a>
+  </div>
+</nav>
+
+<!-- ORGANISERS -->
+<div class="page-hero">
+  <div class="eyebrow">// the people behind it</div>
+  <h1>Organising Team</h1>
+  <p>NeuroHack Paris 2026 is organised by a team of PhD researchers passionate about building the next generation of neuro-immunology science and biotech leadership.</p>
+</div>
+
+<section class="section">
+  <div class="section-header">
+    <div class="eyebrow">// organisers</div>
+    <h2 class="section-title">Meet the team</h2>
+  </div>
+  <div class="team-grid">
+
+    <div class="team-card">
+      <div class="team-photo">
+        <!-- Replace src with real photo: <img src="photos/rachele.jpg" alt="Rachele"> -->
+        <div class="team-photo-placeholder">
+          <i class="ti ti-user-circle"></i>
+          <span>PHOTO COMING</span>
+        </div>
+      </div>
+      <div class="team-info">
+        <div class="team-name">Rachele Rebecca Rubiu</div>
+        <div class="team-role">Nucleate Paris · Co-organiser</div>
+        <p class="team-bio">PhD candidate at the Institut de Psychiatrie et Neurosciences de Paris, Université Paris Cité. Her research focuses on psychiatric genetics, tandem repeats, and schizophrenia. She brings expertise in genomics, bioinformatics, and translational psychiatry to the NeuroHack team.</p>
+        <div class="team-links">
+          <a class="team-link" href="mailto:rachelerebr@nucleate.org"><i class="ti ti-mail"></i>Email</a>
+          <a class="team-link" href="https://www.linkedin.com/in/rachele-rubiu/" target="_blank"><i class="ti ti-brand-linkedin"></i>LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <div class="team-photo">
+        <!-- Replace src with real photo: <img src="photos/gabriel.jpg" alt="Gabriel"> -->
+        <div class="team-photo-placeholder">
+          <i class="ti ti-user-circle"></i>
+          <span>PHOTO COMING</span>
+        </div>
+      </div>
+      <div class="team-info">
+        <div class="team-name">Gabriel Michaux</div>
+        <div class="team-role">Nucleate Paris · Co-organiser</div>
+        <p class="team-bio">CIFRE PhD candidate at the interface of Servier Oncology and the Paris Brain Institute (ICM), investigating spatial and cellular heterogeneity in Glioblastoma. His dual position in industry and academia gives NeuroHack a direct bridge between pharma and fundamental research.</p>
+        <div class="team-links">
+          <a class="team-link" href="mailto:gabrielm@nucleate.org"><i class="ti ti-mail"></i>Email</a>
+          <a class="team-link" href="https://www.linkedin.com/in/gabriel-michaux/" target="_blank"><i class="ti ti-brand-linkedin"></i>LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <div class="team-photo">
+        <!-- Replace src with real photo: <img src="photos/shirine.jpg" alt="Shirine"> -->
+        <div class="team-photo-placeholder">
+          <i class="ti ti-user-circle"></i>
+          <span>PHOTO COMING</span>
+        </div>
+      </div>
+      <div class="team-info">
+        <div class="team-name">Shirine Merlo</div>
+        <div class="team-role">Nucleate · Co-organiser</div>
+        <p class="team-bio">MRC DTP MultiSci PhD student at Imperial College London in Prof. Rylie's lab. Shirine is deeply embedded in the Nucleate community and brings a strong network across European biotech and neuroscience. She co-organised the UK edition of NeuroHack and is a driving force behind the Paris edition.</p>
+        <div class="team-links">
+          <a class="team-link" href="mailto:shirinem@nucleate.org"><i class="ti ti-mail"></i>Email</a>
+          <a class="team-link" href="https://www.linkedin.com/in/shirine-merlo/" target="_blank"><i class="ti ti-brand-linkedin"></i>LinkedIn</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- NUCLEATE -->
+<section class="section section-alt">
+  <div class="section-header">
+    <div class="eyebrow">// about the organiser</div>
+    <h2 class="section-title">About Nucleate</h2>
+  </div>
+  <div class="nucleate-block">
+    <div class="nucleate-logo-wrap">
+      <img src="logos/nucleate.png" alt="Nucleate">
+    </div>
+    <div class="nucleate-text">
+      <h3>The global network for the next generation of biotech leaders</h3>
+      <p>Nucleate is a non-profit, volunteer-led organisation dedicated to empowering PhD students and post-docs to build transformational biotech companies. Through its global network of chapters, Nucleate connects early-career scientists with the mentorship, community, and resources they need to turn bold scientific ideas into real ventures — whether in academia, industry, or entrepreneurship.</p>
+      <p>NeuroHack Paris 2026 is organised by the Nucleate Paris chapter, part of this global network spanning 36 regions across 22 countries.</p>
+      <div class="nucleate-stats">
+        <div><div class="nucleate-stat-num">36</div><div class="nucleate-stat-label">chapters worldwide</div></div>
+        <div><div class="nucleate-stat-num">22</div><div class="nucleate-stat-label">countries</div></div>
+        <div><div class="nucleate-stat-num">800+</div><div class="nucleate-stat-label">active leaders</div></div>
+        <div><div class="nucleate-stat-num">$190M+</div><div class="nucleate-stat-label">raised by alumni ventures</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPONSORS -->
+<section class="section">
+  <div class="section-header">
+    <div class="eyebrow">// sponsors &amp; partners</div>
+    <h2 class="section-title">Who makes this possible</h2>
+    <p class="section-sub">NeuroHack Paris 2026 is made possible by the generous support of our sponsors and partners, each bringing unique expertise and resources to the event.</p>
+  </div>
+
+  <!-- SERVIER -->
+  <div class="sponsor-full">
+    <div class="sponsor-full-logo">
+      <img src="logos/servier.png" alt="Servier">
+    </div>
+    <div>
+      <span class="sponsor-badge badge-main">Main Sponsor</span>
+      <h3>Servier</h3>
+      <p>Servier is an independent international pharmaceutical group driven by the ambition of therapeutic progress for patients. With a strong research focus on oncology, cardiovascular, and neuroscience diseases, Servier brings both scientific expertise and industry mentorship to NeuroHack Paris. Their team will be present throughout the event as mentors and jury members, and they have proposed one of the three challenge subjects — investigating microglial dynamics in ALS — directly from their active research pipeline.</p>
+    </div>
+  </div>
+
+  <!-- BRAIN & MIND -->
+  <div class="sponsor-full">
+    <div class="sponsor-full-logo">
+      <img src="logos/brainmind.jpeg" alt="Brain &amp; Mind">
+    </div>
+    <div>
+      <span class="sponsor-badge badge-venue">Venue Partner</span>
+      <h3>Brain &amp; Mind</h3>
+      <p>Brain &amp; Mind is the Greater Paris Neuroscience Cluster, spanning brain disorders, mental health, and sensory disorders. As the venue partner for NeuroHack Paris 2026, Brain &amp; Mind provides its state-of-the-art incubator space — a dedicated environment at the intersection of neuroscience research and biotech entrepreneurship. Their ecosystem of startups, researchers, and investors is a natural home for an event built around translating bold ideas into real solutions.</p>
+    </div>
+  </div>
+
+  <!-- AWS -->
+  <div class="sponsor-full">
+    <div class="sponsor-full-logo" style="background:#fff">
+      <img src="logos/aws.png" alt="AWS">
+    </div>
+    <div>
+      <span class="sponsor-badge badge-compute">Compute Partner</span>
+      <h3>Amazon Web Services (AWS)</h3>
+      <p>AWS is providing the computational infrastructure that powers the AI track at NeuroHack Paris. Teams in the AI / Bioinformatics track will have access to GPU compute resources and shared Jupyter notebook environments — the same setup AWS deployed for the Genopole hackathon — allowing participants to run real machine learning pipelines, process omics datasets, and prototype digital health tools without any local compute constraints. A built-in coding agent will also be available directly inside the notebook environment throughout the weekend.</p>
+    </div>
+  </div>
+
+</section>
+
+<section class="cta-band">
+  <h2>Want to sponsor NeuroHack Paris?</h2>
+  <p>We have open sponsorship slots. Get in touch with the organising team.</p>
+  <div class="cta-btns">
+    <a class="btn-primary" href="mailto:rachelerebr@nucleate.org"><i class="ti ti-mail"></i>Contact us</a>
+    <a class="btn-white" href="apply.html"><i class="ti ti-clipboard-list"></i>Apply to participate</a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-left">© 2026 <span>Nucleate Paris</span></div>
+  <div class="footer-right">Brain&amp;Mind Incubator · Paris, France</div>
+</footer>
+
+</body>
+</html>
